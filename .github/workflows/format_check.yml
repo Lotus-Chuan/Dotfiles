@@ -26,6 +26,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: run_shellcheck
         run: |
-          apt-get install shellcheck
+          sudo apt-get install shellcheck
           shellcheck *.sh
 
