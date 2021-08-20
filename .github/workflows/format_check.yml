@@ -24,6 +24,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: Run shellcheck with reviewdog
+      - name: run_shellcheck
         uses: reviewdog/action-shellcheck@v1.6.0
+        run: |
+          apt-get install shellcheck
+          shellcheck *.sh
 
